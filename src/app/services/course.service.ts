@@ -20,8 +20,9 @@ export class CourseService {
   }
 
   createCourse(data: any): Observable<any> {
-    return this.http.post(baseUrl, data);
+    return this.http.post(baseUrl, data, { responseType: 'text' });
   }
+
 
   updateCourse(data: any, courseCode:string): Observable<any> {
 

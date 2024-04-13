@@ -17,7 +17,7 @@
           routerLinkActive="active" ariaCurrentWhenActive="page" aria-current="page"> View Course | </a>
 
       <a *ngIf="course.edit"
-         [routerLink]="['/editstudent', course.courseCode, 'edit']"
+         [routerLink]="['/editcourse', course.courseCode, 'edit']"
          [queryParams]="{allowEdit: '1'}"
          routerLinkActive="active" ariaCurrentWhenActive="page" aria-current="page"> Edit Course | </a>
 
