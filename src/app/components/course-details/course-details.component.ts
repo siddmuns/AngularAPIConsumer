@@ -19,13 +19,14 @@ export class CourseDetailsComponent implements OnInit{
     this.getCourseByCourseCode(this.route.snapshot.params['courseCode']);
   }
 
-  getCourseByCourseCode(courseCode:string){
+  getCourseByCourseCode(courseCode: string): void {
     this.studentService.getCourseByCourseCode(courseCode)
       .subscribe({
-        next:(data)=>{
+        next: (data: CourseModel)=> {
           this.course = data;
           console.log(data);
         },
-        error:(e)=>console.error(e)});
+        error: (e) => console.error(e)
+      });
   }
 }

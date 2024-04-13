@@ -7,8 +7,8 @@ import {DeleteCourseComponent} from "./components/delete-course/delete-course.co
 
 export const routes: Routes = [
   { path: 'courses', component: CourseListComponent },
-  { path: 'courses/:id', component: CourseDetailsComponent },
+  { path: 'courses/:courseCode', component: CourseDetailsComponent },
   { path: 'addcourse', component: AddCourseComponent },
-  { path: 'deletecourse/:id', component: DeleteCourseComponent },
-  { path: 'editcourse/:id/edit', component: EditCourseComponent }
+  { path: 'deletecourse/:courseCode', component: DeleteCourseComponent },
+  { path: 'editcourse/:courseCode/edit', component: EditCourseComponent }
 ];
