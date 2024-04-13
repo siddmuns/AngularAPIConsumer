@@ -15,7 +15,7 @@ export class CourseService {
     return this.http.get<CourseModel[]>(baseUrl);
   }
 
-  getCourseByCourseCode(courseCode:string): Observable<CourseModel> {
+  getCourseByCourseCode(courseCode:string): Observable<any> {
     return this.http.get(`${baseUrl}/${courseCode}`);
   }
 
