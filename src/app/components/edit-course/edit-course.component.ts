@@ -3,7 +3,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CourseModel} from "../../models/course.model";
 import {CourseService} from "../../services/course.service";
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute} from "@angular/router";
 import {NgIf} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 
@@ -53,7 +53,7 @@ export class EditCourseComponent implements OnInit {
         },
         error: (e) => {
           console.error(e);
-          alert('Failed To Edit Course.');
+          alert('Failed To Edit Course');
         }
       });
     }

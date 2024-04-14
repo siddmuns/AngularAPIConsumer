@@ -1,6 +1,6 @@
 //Munsif Siddiqui
 //991680159
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {CourseService} from "../../services/course.service";
 import {NgIf} from "@angular/common";
 import {CourseModel} from "../../models/course.model";
@@ -31,7 +31,7 @@ export class AddCourseComponent {
       },
       error: (e) => {
         console.error(e);
-        alert('Failed To Add Course.');
+        alert('Failed To Add Course');
       }
     });
   }
