@@ -1,1 +1,20 @@
-<p>edit-course works!</p>
+<h1>Edit Course</h1>
+
+<div *ngIf="course">
+  <label>Course Name:</label> <br>
+  <input type="text" [(ngModel)]="course.courseName" name="courseName"> <br>
+
+  <label>Course Code (ID):</label> <br>
+  <input type="text" [(ngModel)]="course.courseCode" name="courseCode" readonly> <br>
+
+  <label>Course Credit:</label> <br>
+  <input type="text" [(ngModel)]="course.courseCredit" name="courseCredit"> <br>
+
+  <label>Editable:</label> <br>
+  <select [(ngModel)]="course.edit" name="edit">
+    <option [value]="true">True</option>
+    <option [value]="false">False</option>
+  </select> <br>
+
+  <button (click)="updateCourse()">Save Edit Changes</button>
+</div>

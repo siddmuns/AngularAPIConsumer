@@ -26,7 +26,7 @@ export class CourseService {
 
   updateCourse(data: any, courseCode:string): Observable<any> {
 
-    return this.http.put(`${baseUrl}/${courseCode}`,data);
+    return this.http.put(`${baseUrl}/${courseCode}`,data, { responseType: 'text' });
   }
 
   deleteCourse(courseCode:string): Observable<any> {
