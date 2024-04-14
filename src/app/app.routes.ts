@@ -1,3 +1,5 @@
+//Munsif Siddiqui
+//991680159
 import { Routes } from '@angular/router';
 import {CourseListComponent} from "./components/course-list/course-list.component";
 import {CourseDetailsComponent} from "./components/course-details/course-details.component";

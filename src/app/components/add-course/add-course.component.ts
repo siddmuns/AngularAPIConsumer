@@ -1,3 +1,5 @@
+//Munsif Siddiqui
+//991680159
 import {Component, OnInit} from '@angular/core';
 import {CourseService} from "../../services/course.service";
 import {NgIf} from "@angular/common";
@@ -22,14 +24,14 @@ export class AddCourseComponent {
 
   addCourse() {
     this.courseService.createCourse(this.newCourse).subscribe({
-      next: (response) => {
-        console.log(response);
-        alert('Course added successfully!');
+      next: (data) => {
+        console.log(data);
+        alert('Course Added Successfully!');
         this.newCourse = new CourseModel(); // Reset the model to clear the form
       },
       error: (e) => {
         console.error(e);
-        alert('Failed to add course.');
+        alert('Failed To Add Course.');
       }
     });
   }
